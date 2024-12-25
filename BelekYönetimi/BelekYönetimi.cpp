@@ -40,6 +40,43 @@ int main()
 	//delete ogrenci3; // burada hata verir çünkü ogrenci3 burada tanımlı değil
 
 
+	//Heapde dizi oluşturmak için dizi oluşturulurken pointer kullanılır
+	//int adet = 0;
+
+	//std::cout << "Dizi adetini giriniz: ";
+	//std::cin >> adet;
+
+	//
+	//int* dizi = new int[adet];
+
+	//for (int i = 0; i < adet; i++) {
+	//	std::cout << dizi[i] << std::endl;
+	//}
+
+	//delete dizi;
+	
+	//int stackoverflow[1000000]; //Stack de 1MB yer ayırır]
+
+	//Dangling Pointer
+	int* sayi3 = new int(15);
+	std::cout << "Dangling Pointer " << *sayi3 << std::endl; //Dangling Pointer
+	int* sayi4 = sayi3;
+
+	delete sayi3;
+	std::cout << "Dangling Pointer " << *sayi4 << std::endl; //Dangling Pointer
+#pragma region typedef
+
+	
+	//typedef
+	typedef int sayi;
+	sayi sayi5 = 5;
+
+#pragma endregion
+
+#pragma region Shared region
+
+#pragma endregion
+
     std::cout << "Hello World!\n";
 }
 
